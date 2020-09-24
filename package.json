@@ -1,0 +1,11 @@
+{
+  "name": "zenn",
+  "version": "1.0.0",
+  "description": "Zenn articles and books",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "zenn-cli": "^0.1.33"
+  }
+}
