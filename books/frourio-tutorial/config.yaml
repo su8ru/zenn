@@ -1,0 +1,7 @@
+title: "frourio 入門チュートリアル"
+summary: "どんなに TypeScript で型安全に書いたつもりでも、API 通信という割れ窓は回避できません。\n
+せめてフロントエンドとバックエンドの API 通信は型安全にしたい！\n
+そんな人類共通の思いを叶えるための CLI ツール 使い方総集編 (執筆予定(予定は未定))"
+topics: ["TypeScript", "frourio", "aspida"]
+published: false
+price: 0 # 有料の場合200〜5000
