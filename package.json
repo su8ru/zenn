@@ -5,6 +5,11 @@
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "new:article": "zenn new:article",
+    "new:book": "zenn new:book",
+    "preview": "zenn preview"
+  },
   "devDependencies": {
     "zenn-cli": "^0.1.33"
   }
