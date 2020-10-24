@@ -13,3 +13,10 @@ title: "アプリ詳細・開発状況について"
 - [Figma: afes-website/student-app/design](https://www.figma.com/file/KiMcvs2j5yy1QEHiQC9wO5/design)
   UI 設計はこの design で行っている。 
 - [Figma Prototype](https://www.figma.com/proto/KiMcvs2j5yy1QEHiQC9wO5/design)
+
+
+**--------
+編集注:
+manage-app system は開発を中止しました。
+v2.0.0 は認証関連のみ、v2.1.0 は欠番とし、v2.2.0 でオンライン展示関連の実装をしています。
+--------**
