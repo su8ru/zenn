@@ -5,3 +5,13 @@ summary: "どんなに TypeScript で型安全に書いたつもりでも、API 
 topics: ["TypeScript", "frourio", "aspida"]
 published: false
 price: 0 # 有料の場合200〜5000
+chapters:
+  - 01-introduction
+  - 02-create-project
+  - 03-directory
+  - 04-type-check
+  - 05-deploy
+  - 06-api-definition
+  - 07-create-controller
+  - 08-inplement-controller
+  - 09-geerated-files
