@@ -3,7 +3,7 @@ title: "aspida の API 定義をパッケージ化する"
 emoji: "🚀"
 type: "tech"
 topics: ["aspida", "npm"]
-published: false
+published: true
 ---
 
 自分用備忘録 兼 誰かのための記事
