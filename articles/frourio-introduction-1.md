@@ -6,6 +6,12 @@ topics: ["frourio", "aspida", "TypeScript"]
 published: false
 ---
 
+この記事は frourio チュートリアル連載 第 1 回です！以下の連載記事もぜひぜひ 👇️
+
+**第 1 回** : frourio でフロントエンドとバックエンドを一緒に静的型検査する - [Qiita](https://qiita.com/su8ru/items/08d4222af6ddb8eb218b)
+第 2 回 : frourio でサクッと API 型定義 & コントローラーを書く - [Qiita](https://qiita.com/su8ru/items/e4ba6fd311ee3905d174)
+第 3 回 : frourio でログイン処理などを行える Hooks を定義する - [Qiita](https://qiita.com/su8ru/items/5f06dd45ed14117c291f)
+
 # その API 通信、本当に型安全ですか？
 
 従来の HTTP 通信において、パスやリクエスト・レスポンスに対して型検査をすることはできませんでした。
@@ -177,3 +183,7 @@ SERVER_PORT=8080
 型安全さいこー！！
 
 次回は aspida と共通の型定義とコントローラー、つまり `server/api/` の中身について書く予定です。乞うご期待！
+
+**第 1 回** : frourio でフロントエンドとバックエンドを一緒に静的型検査する - [Qiita](https://qiita.com/su8ru/items/08d4222af6ddb8eb218b)
+第 2 回 : frourio でサクッと API 型定義 & コントローラーを書く - [Qiita](https://qiita.com/su8ru/items/e4ba6fd311ee3905d174)
+第 3 回 : frourio でログイン処理などを行える Hooks を定義する - [Qiita](https://qiita.com/su8ru/items/5f06dd45ed14117c291f)

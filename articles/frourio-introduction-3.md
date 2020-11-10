@@ -6,10 +6,11 @@ topics: ["frourio", "TypeScript"]
 published: false
 ---
 
-この記事は frourio チュートリアル連載 第 3 回です。前の記事を読んでいない方は先に以下の記事を読むことをおすすめします！
+この記事は frourio チュートリアル連載 第 3 回です。前の記事を読んでいない方は先に読むことをおすすめします！
 
-第 1 回 : [frourio でフロントエンドとバックエンドを一緒に静的型検査する \- Qiita](https://qiita.com/su8ru/items/08d4222af6ddb8eb218b)
-第 2 回 : [frourio でサクッと API 型定義 & コントローラーを書く \- Qiita](https://qiita.com/su8ru/items/e4ba6fd311ee3905d174)
+第 1 回 : frourio でフロントエンドとバックエンドを一緒に静的型検査する - [Qiita](https://qiita.com/su8ru/items/08d4222af6ddb8eb218b)
+第 2 回 : frourio でサクッと API 型定義 & コントローラーを書く - [Qiita](https://qiita.com/su8ru/items/e4ba6fd311ee3905d174)
+**第 3 回** : frourio でログイン処理などを行える Hooks を定義する - [Qiita](https://qiita.com/su8ru/items/5f06dd45ed14117c291f)
 
 # 環境
 
@@ -274,3 +275,7 @@ export default defineController(() => ({
 [憧れのTypeScriptフルスタック環境がコマンド1発で作れる超軽量フレームワーク「frourio」 \- Qiita](https://qiita.com/m_mitsuhide/items/00b139bb565dddf8006a)
 
 (私もバズりてぇ～～～)
+
+第 1 回 : frourio でフロントエンドとバックエンドを一緒に静的型検査する - [Qiita](https://qiita.com/su8ru/items/08d4222af6ddb8eb218b)
+第 2 回 : frourio でサクッと API 型定義 & コントローラーを書く - [Qiita](https://qiita.com/su8ru/items/e4ba6fd311ee3905d174)
+**第 3 回** : frourio でログイン処理などを行える Hooks を定義する - [Qiita](https://qiita.com/su8ru/items/5f06dd45ed14117c291f)

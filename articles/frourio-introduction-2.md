@@ -6,9 +6,11 @@ topics: ["frourio", "aspida", "TypeScript"]
 published: false
 ---
 
-この記事は frourio チュートリアル連載 第 2 回です。前の記事を読んでいない方は先に以下の記事を読むことをおすすめします！
+この記事は frourio チュートリアル連載 第 2 回です。前の記事を読んでいない方は先に読むことをおすすめします！
 
-第 1 回 : [frourio でフロントエンドとバックエンドを一緒に静的型検査する \- Qiita](https://qiita.com/su8ru/items/08d4222af6ddb8eb218b)
+第 1 回 : frourio でフロントエンドとバックエンドを一緒に静的型検査する - [Qiita](https://qiita.com/su8ru/items/08d4222af6ddb8eb218b)
+**第 2 回** : frourio でサクッと API 型定義 & コントローラーを書く - [Qiita](https://qiita.com/su8ru/items/e4ba6fd311ee3905d174)
+第 3 回 : frourio でログイン処理などを行える Hooks を定義する - [Qiita](https://qiita.com/su8ru/items/5f06dd45ed14117c291f)
 
 # API 定義の基本的な書き方
 
@@ -253,3 +255,7 @@ app.METHOD(PATH, HANDLER)
 aspida の型定義の中にコントローラーも書けるのは理にかなっていて、管理とかも楽そうです。
 
 次回は Hooks についての予定です！乞うご期待！
+
+第 1 回 : frourio でフロントエンドとバックエンドを一緒に静的型検査する - [Qiita](https://qiita.com/su8ru/items/08d4222af6ddb8eb218b)
+**第 2 回** : frourio でサクッと API 型定義 & コントローラーを書く - [Qiita](https://qiita.com/su8ru/items/e4ba6fd311ee3905d174)
+第 3 回 : frourio でログイン処理などを行える Hooks を定義する - [Qiita](https://qiita.com/su8ru/items/5f06dd45ed14117c291f)
