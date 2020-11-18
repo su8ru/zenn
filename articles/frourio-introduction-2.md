@@ -88,7 +88,6 @@ yarn dev:frourio
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/225023/baf034df-cc8d-ae30-8585-ecb7502bc961.png)
 
-
 先程 frourio を dev モードで起動させましたが、起動中は
 
 - `server/api/` にディレクトリが追加されたらファイル群を自動生成
