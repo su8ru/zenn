@@ -1,5 +1,5 @@
 ---
-title: "frourio × aspida で 4 通りのバリデーションを実装する"
+title: "frourio × aspida で 4 種類のバリデーションを実装する"
 emoji: "✅"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["frourio", "aspida", "TypeScript"]
@@ -11,11 +11,11 @@ published: false
 第 1 回 : frourio でフロントエンドとバックエンドを一緒に静的型検査する - [Qiita](https://qiita.com/su8ru/items/08d4222af6ddb8eb218b)
 第 2 回 : frourio でサクッと API 型定義 & コントローラーを書く - [Qiita](https://qiita.com/su8ru/items/e4ba6fd311ee3905d174)
 第 3 回 : frourio でログイン処理などを行える Hooks を定義する - [Qiita](https://qiita.com/su8ru/items/5f06dd45ed14117c291f)
-**第 4 回** : frourio × aspida で 4 通りのバリデーションを実装する - [Qiita](https://qiita.com/su8ru/items/c52b3e3b80edbc0363fa)
+**第 4 回** : frourio × aspida で 4 種類のバリデーションを実装する - [Qiita](https://qiita.com/su8ru/items/c52b3e3b80edbc0363fa)
 
-# 4 つのバリデーション
+# 4 種類のバリデーション
 
-frourio では、以下の 4 つのバリデーションを定義することができます。
+frourio では、以下の 4 種類のバリデーションを定義することができます。
 
 - Path parameter
 - URL query
@@ -244,9 +244,7 @@ Custom validation は、`preValidation Hooks` の最後に呼び出されます�
 
 API 定義にバリデーションクラスを直接書けるのは便利ですね、API 仕様とコントローラーが分離しててわかりやすいです！
 
----
-
 第 1 回 : frourio でフロントエンドとバックエンドを一緒に静的型検査する - [Qiita](https://qiita.com/su8ru/items/08d4222af6ddb8eb218b)
 第 2 回 : frourio でサクッと API 型定義 & コントローラーを書く - [Qiita](https://qiita.com/su8ru/items/e4ba6fd311ee3905d174)
 第 3 回 : frourio でログイン処理などを行える Hooks を定義する - [Qiita](https://qiita.com/su8ru/items/5f06dd45ed14117c291f)
-**第 4 回** : frourio × aspida で 4 通りのバリデーションを実装する - [Qiita](https://qiita.com/su8ru/items/c52b3e3b80edbc0363fa)
+**第 4 回** : frourio × aspida で 4 種類のバリデーションを実装する - [Qiita](https://qiita.com/su8ru/items/c52b3e3b80edbc0363fa)

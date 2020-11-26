@@ -11,7 +11,7 @@ published: false
 第 1 回 : frourio でフロントエンドとバックエンドを一緒に静的型検査する - [Qiita](https://qiita.com/su8ru/items/08d4222af6ddb8eb218b)
 **第 2 回** : frourio でサクッと API 型定義 & コントローラーを書く - [Qiita](https://qiita.com/su8ru/items/e4ba6fd311ee3905d174)
 第 3 回 : frourio でログイン処理などを行える Hooks を定義する - [Qiita](https://qiita.com/su8ru/items/5f06dd45ed14117c291f)
-第 4 回 : frourio × aspida で 4 通りのバリデーションを実装する - [Qiita](https://qiita.com/su8ru/items/c52b3e3b80edbc0363fa)
+第 4 回 : frourio × aspida で 4 種類のバリデーションを実装する - [Qiita](https://qiita.com/su8ru/items/c52b3e3b80edbc0363fa)
 
 # API 定義の基本的な書き方
 
@@ -259,4 +259,4 @@ aspida の型定義の中にコントローラーも書けるのは理にかな�
 第 1 回 : frourio でフロントエンドとバックエンドを一緒に静的型検査する - [Qiita](https://qiita.com/su8ru/items/08d4222af6ddb8eb218b)
 **第 2 回** : frourio でサクッと API 型定義 & コントローラーを書く - [Qiita](https://qiita.com/su8ru/items/e4ba6fd311ee3905d174)
 第 3 回 : frourio でログイン処理などを行える Hooks を定義する - [Qiita](https://qiita.com/su8ru/items/5f06dd45ed14117c291f)
-第 4 回 : frourio × aspida で 4 通りのバリデーションを実装する - [Qiita](https://qiita.com/su8ru/items/c52b3e3b80edbc0363fa)
+第 4 回 : frourio × aspida で 4 種類のバリデーションを実装する - [Qiita](https://qiita.com/su8ru/items/c52b3e3b80edbc0363fa)
