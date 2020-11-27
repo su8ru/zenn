@@ -18,7 +18,7 @@ published: false
 ~~ちなみに私は本番環境の `public_html` をふっ飛ばしたことがあります。~~
 :::
 
-さて、**ConoHa WING に GitHub Actions を用いてデプロイする** というのがこの記事の主題ですが、まず前提として ConoHa WING について軽く確認しておきましょう。
+さて、**ConoHa WING に GitHub Actions を用いてデプロイする** というのがこの記事の主題ですが、まず前提として ConoHa WING および GitHub Actions について軽く確認しておきましょう。
 
 ## ConoHa WING って？
 
