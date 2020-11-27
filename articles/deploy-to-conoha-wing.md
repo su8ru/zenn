@@ -22,11 +22,10 @@ published: false
 
 ## ConoHa WING って？
 
-ConoHa WING トップページを見てみましょう。
-
 > 月額 400 円から使える
 > _国内最速_
 > レンタルサーバー ConoHa WING
+> [超高速レンタルサーバーならConoHa WING｜初期費用・最低利用期間なし](https://www.conoha.jp/wing/)
 
 はい。ご存じの方も多いかもしれませんが、**ConoHa WING はレンタルサーバー**です。
 
@@ -41,13 +40,26 @@ ConoHa WING トップページを見てみましょう。
 
 とか言われたりしていましたが、これでもう**最強のレンタルサーバー**ですね！
 
+## GitHub Actions って？
+
+> GitHub Actionsを使用すると、ワールドクラスのCI / CDですべてのソフトウェアワークフローを簡単に自動化できます。 GitHubから直接コードをビルド、テスト、デプロイでき、コードレビュー、ブランチ管理、問題のトリアージを希望どおりに機能させます。
+> [Actions \| GitHub](https://github.co.jp/features/actions)
+
+**GitHub Actions は GitHub 上で使える CI / CD** です。
+
+比較的新しいサービスで、2019 年 8 月に β 版が一般公開、2019 年 11 月に正式公開されています。
+とにかく安くて（ほとんど無料）、Actions による拡張性もあり、とても便利です。
+
 # 下準備
 
-この記事では、特記事項がない限り、フロントエンドのなんやかんやをビルドしたあと、`dist` ディレクトリの中身をデプロイする想定になっています。
+この記事では、特筆しなければ、フロントエンドのなんやかんやをビルドしたあと、`dist` ディレクトリの中身をデプロイする想定になっています。
 いい感じに読み替えてください（丸投げ）
 
+## workflow
+
 以下、この例での workflow です。
-GitHub Actions の優れた解説記事がたくさんあるので、このあたりは特に解説しません。
+GitHub Actions の優れた解説記事はたくさんあるので、このあたりは特に解説しません。
+（この workflow も完璧じゃないですし…）
 
 ```yml:.github/workflows/deploy.yml
 name: Deploy into production server
@@ -84,7 +96,17 @@ jobs:
 
 この workflow の一番下に、これから挙げる方法のうち、お好きなものを書き足して完成です。
 
-# いろいろな方法
+## Secrets
+
+リポジトリの Secrets に `SSH_HOST`, `SSH_PORT`, `SSH_KEY`, `SSH_USER` を登録するのも忘れずに！
+
+![](https://storage.googleapis.com/zenn-user-upload/dzgnyhkohzzhfka8cs8famb8uywa)
+
+`SSH_KEY` は秘密鍵を、他の情報は ConoHa コントロールパネルの サーバー管理 > SSH にある情報を入れておきましょう。
+
+![](https://storage.googleapis.com/zenn-user-upload/4xrhyyncvps58jx7yqy2g6nir32b)
+
+# デプロイする
 
 ## rsync
 
@@ -144,7 +166,7 @@ ConoHa Advent Calender 2018 で紹介されていたものです。
 ## git
 
 [afes-website/back](https://github.com/afes-website/back) で採用した方法です。
-この例はバックエンドですので、workflow 全体を例示します。
+この例はバックエンドですから、workflow 全体を例示します。
 また、migrate などの処理も含まれています。参考にどうぞ。
 
 ```yml:.github/workflows/deploy.yml
@@ -164,7 +186,7 @@ jobs:
         with:
           host:     ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          key:      ${{ secrets.SSH_SSHKEY }}
+          key:      ${{ secrets.SSH_KEY }}
           port:     ${{ secrets.SSH_PORT }}
           envs: DIR
           script_stop: true
@@ -178,3 +200,9 @@ jobs:
         env:
           DIR: public_html/hoge
 ```
+
+# おわりに
+
+この記事は 11 月中に書いているのですが、19 日目と後半なこともあり、ネタ被りが発生しないかドキドキしています………
+
+…なにはともあれ、さらに進化した ConoHa WING の発展を楽しみにしています！
