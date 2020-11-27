@@ -6,7 +6,7 @@ topics: ["conoha", "conohawing", "githubactions"]
 published: false
 ---
 
-![](https://img.shields.io/badge/-ConoHa_Advent_Calendar_2020_%7C%2019%E6%97%A5%E7%9B%AE-EF5350?style=flat-square)
+[![](https://img.shields.io/badge/-ConoHa_Advent_Calendar_2020_%7C%2019%E6%97%A5%E7%9B%AE-EF5350?style=flat-square)](https://qiita.com/advent-calendar/2020/conoha)
 
 # はじめに
 
