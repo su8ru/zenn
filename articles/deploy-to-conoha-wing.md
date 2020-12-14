@@ -13,7 +13,7 @@ published: false
 
 さて、この記事では、GitHub の指定ブランチに push されたものを、GitHub Actions を用いて ConoHa WING に自動デプロイする方法をご紹介します。
 
-![](https://storage.googleapis.com/zenn-user-upload/fxri6pl5o9b117t4od2wx0rncsvf)
+![](https://storage.googleapis.com/zenn-user-upload/26vkudnj72pz48fkuaklsnbvoob9)
 
 まずは前提として、ConoHa WING および GitHub Actions について軽く確認しておきましょう。
 
