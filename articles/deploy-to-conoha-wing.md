@@ -11,7 +11,7 @@ published: false
 この記事は、[ConoHa Advent Calender 2020](https://qiita.com/advent-calendar/2020/conoha) 19 日目の記事です 🎄✨
 アドベントカレンダーの投稿は今年が初めてですが、どうか生暖かい目でご覧ください。
 
-さて、この記事では、GitHub の指定ブランチに push されたものを、GitHub Actions を用いて ConoHa WING に自動デプロイする方法をご紹介します。
+この記事では、GitHub の指定ブランチに push されたものを、GitHub Actions を用いて ConoHa WING に自動デプロイする方法をご紹介します。
 
 ![](https://storage.googleapis.com/zenn-user-upload/26vkudnj72pz48fkuaklsnbvoob9)
 
@@ -34,8 +34,8 @@ published: false
 …が、**SSH が使えます！**（やったー）
 そしてなんと、**rsync が入ってました！！**（な、なんだってー）
 
-というのも、1 年ちょっと前に、この記事と同じ内容を調べていたのですが、当時はまだ WING で rsync が使えないというのが**通説**でした。
-（ 1 年前の私がちゃんとチェックしたか怪しいので濁します…）
+というのも、1 年ちょっと前にこの記事と同じ内容を調べていたのですが、当時はまだ WING で rsync が使えないというのが**通説**でした。
+（1 年前の私がちゃんとチェックしたか怪しいので濁します…）
 
 > ~~…そういうところだぞ！このはちゃん！~~
 > [ConoHa Wing で自動デプロイして快適に WordPress テーマを更新しよう！ \- Qiita](https://qiita.com/ezaki/items/9f22b48e3ad83d226160)
@@ -115,8 +115,8 @@ jobs:
 > rsync は、UNIXシステムにおいて、差分符号化を使ってデータ転送量を最小化し、遠隔地間のファイルやディレクトリの同期を行うアプリケーションソフトウェアである。類似のプログラムやプロトコルにはない rsync 独自の特徴として、ミラーサイトとの転送が双方向に高々1回で済む点がある。 
 > [rsync \- Wikipedia](https://ja.wikipedia.org/wiki/Rsync)
 
-ど定番ですね。気づいたら使えるようになっててびっくりしました。
-オプションは適宜調整してください、私は詳しくないので……
+ど定番ですね。気づいたら使えるようになっていてびっくりしました。
+オプションは適宜調整してください、私は詳しくないので……。
 
 ```yml
       - name: push with rsync
