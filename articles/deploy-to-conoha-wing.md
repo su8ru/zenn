@@ -6,19 +6,21 @@ topics: ["conoha", "conohawing", "githubactions"]
 published: false
 ---
 
-[![](https://img.shields.io/badge/-ConoHa_Advent_Calendar_2020_%7C%2019%E6%97%A5%E7%9B%AE-EF5350?style=flat-square)](https://qiita.com/advent-calendar/2020/conoha)
-
 # はじめに
 
-この記事は、[ConoHa Advent Calender 2020](https://qiita.com/advent-calendar/2020/conoha) 19 日目の記事です。
+この記事は、[ConoHa Advent Calender 2020](https://qiita.com/advent-calendar/2020/conoha) 19 日目の記事です 🎄✨
 アドベントカレンダーの投稿は今年が初めてですが、どうか生暖かい目でご覧ください。
 
-:::message alert
-この記事はデプロイ方法の紹介を目的としており、生じた損害に対する責任は一切負いません。
-~~ちなみに私は本番環境の `public_html` をふっ飛ばしたことがあります。~~
-:::
+さて、この記事では、GitHub の指定ブランチに push されたものを、GitHub Actions を用いて ConoHa WING に自動デプロイする方法をご紹介します。
 
-さて、**ConoHa WING に GitHub Actions を用いてデプロイする** というのがこの記事の主題ですが、まず前提として ConoHa WING および GitHub Actions について軽く確認しておきましょう。
+![](https://storage.googleapis.com/zenn-user-upload/fxri6pl5o9b117t4od2wx0rncsvf)
+
+まずは前提として、ConoHa WING および GitHub Actions について軽く確認しておきましょう。
+
+:::message
+この記事はデプロイ方法の紹介を目的としており、内容により生じた損害に対する責任は一切負いません。
+~~ちなみに私は本番環境の `public_html/` をふっ飛ばしたことがあります。皆様もどうかお気をつけください。~~
+:::
 
 ## ConoHa WING って？
 
@@ -106,7 +108,7 @@ jobs:
 
 ![](https://storage.googleapis.com/zenn-user-upload/4xrhyyncvps58jx7yqy2g6nir32b)
 
-# デプロイする
+# デプロイ！
 
 ## rsync
 
@@ -132,7 +134,7 @@ jobs:
 > [Secure copy \- Wikipedia](https://ja.wikipedia.org/wiki/Secure_copy)
 
 [afes-website/front](https://github.com/afes-website/front) ではこの方法を採用していました。
-シンプルに全部送りつけるというう点では一番優れていると思います。
+シンプルに全部送りつけるという点では一番優れていると思います。
 
 ```yml
       - name: push with scp
@@ -166,7 +168,7 @@ ConoHa Advent Calender 2018 で紹介されていたものです。
 ## git
 
 [afes-website/back](https://github.com/afes-website/back) で採用した方法です。
-この例はバックエンドですから、workflow 全体を例示します。
+この例はバックエンドですので、workflow 全体を例示します。
 また、migrate などの処理も含まれています。参考にどうぞ。
 
 ```yml:.github/workflows/deploy.yml
@@ -201,8 +203,18 @@ jobs:
           DIR: public_html/hoge
 ```
 
+# 完成 🎉
+
+できあがった workflow を `.github/workflows/deploy.yml` とかに置いて（ファイル名はご自由に）、commti して push したら完成！
+これで指定したブランチに push されると、自動デプロイが走ります。
+
+そしてリポジトリの「Actions」タブからログが確認できます。
+
+![](https://storage.googleapis.com/zenn-user-upload/ha4b8ecl6fz9ai6zqzmkj2n032hh)
+
 # おわりに
 
 この記事は 11 月中に書いているのですが、19 日目と後半なこともあり、ネタ被りが発生しないかドキドキしています………
 
 …なにはともあれ、さらに進化した ConoHa WING の発展を楽しみにしています！
+あとこのはちゃんもね！
