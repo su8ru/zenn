@@ -11,7 +11,7 @@ published: false
 この記事は、[ConoHa Advent Calender 2020](https://qiita.com/advent-calendar/2020/conoha) 19 日目の記事です 🎄✨
 アドベントカレンダーの投稿は今年が初めてですが、どうか生暖かい目でご覧ください。
 
-この記事では、GitHub の指定ブランチに push されたものを、GitHub Actions を用いて ConoHa WING に自動デプロイする方法をご紹介します。
+この記事では、GitHub の指定ブランチに push されたものを、GitHub Actions を用いて ConoHa WING ･ VPS に自動デプロイする方法をご紹介します。
 
 ![](https://storage.googleapis.com/zenn-user-upload/26vkudnj72pz48fkuaklsnbvoob9)
 
@@ -57,11 +57,14 @@ published: false
 この記事では、特筆しなければ、フロントエンドのなんやかんやをビルドしたあと、`dist` ディレクトリの中身をデプロイする想定になっています。
 いい感じに読み替えてください（丸投げ）
 
-## Workflow
+## workflow
 
 以下、この例での workflow です。
+
 GitHub Actions の優れた解説記事はたくさんあるので、このあたりは特に解説しません。
-（この workflow も完璧じゃないですし…）
+この workflow も完璧じゃないですし…
+
+job は build と deploy に分けたほうがいい気もしています。~~面倒でやっていませんが~~
 
 ```yml:.github/workflows/deploy.yml
 name: Deploy into production server
@@ -96,17 +99,17 @@ jobs:
       ...
 ```
 
-この workflow の一番下に、これから挙げる方法のうち、お好きなものを書き足して完成です。
+これに、[デプロイ！](#デプロイ!) で挙げる方法のうちお好きなものを書き足して完成です！
 
-## Secrets
+## secrets
 
 リポジトリの Secrets に `SSH_HOST`, `SSH_PORT`, `SSH_KEY`, `SSH_USER` を登録するのも忘れずに！
 
-![](https://storage.googleapis.com/zenn-user-upload/dzgnyhkohzzhfka8cs8famb8uywa)
+![](https://storage.googleapis.com/zenn-user-upload/7tx4phqfr2trmb2xzg3nuswt0fzw)
 
 `SSH_KEY` は秘密鍵を、他の情報は ConoHa コントロールパネルの サーバー管理 > SSH にある情報を入れておきましょう。
 
-![](https://storage.googleapis.com/zenn-user-upload/4xrhyyncvps58jx7yqy2g6nir32b)
+![](https://storage.googleapis.com/zenn-user-upload/pzyz140bp84d57k4xh43ajt9kmxt)
 
 # デプロイ！
 
@@ -205,16 +208,19 @@ jobs:
 
 # 完成 🎉
 
-できあがった workflow を `.github/workflows/deploy.yml` とかに置いて（ファイル名はご自由に）、commti して push したら完成！
+できあがった workflow を `.github/workflows/deploy.yml` とかに置いて（ファイル名はご自由に）、commit して push したら完成！
 これで指定したブランチに push されると、自動デプロイが走ります。
 
 そしてリポジトリの「Actions」タブからログが確認できます。
 
-![](https://storage.googleapis.com/zenn-user-upload/ha4b8ecl6fz9ai6zqzmkj2n032hh)
+![](https://storage.googleapis.com/zenn-user-upload/jivohfhb93hjumsfa1eaewhl9207)
 
 # おわりに
 
-この記事は 11 月中に書いているのですが、19 日目と後半なこともあり、ネタ被りが発生しないかドキドキしています………
+最後までお読みいただきありがとうございました！
 
-…なにはともあれ、さらに進化した ConoHa WING の発展を楽しみにしています！
-あとこのはちゃんもね！
+ConoHa WING では rsync が使えないことを前提にこの記事を書こうと思ったのですが、先述した通りなんと使えるようになっていました。
+その時点でこの記事の存在意義が揺らいでしまったのですが、GitHub Actions を使ったデプロイという選択肢のご紹介ということでお役に立てればと思います。
+（ConoHa VPS でも使えるものの、タイトルが WING なのにはこのような経緯があります。）
+
+…なにはともあれ、さらに進化した ConoHa WING・このはちゃんの発展を楽しみにしています！
