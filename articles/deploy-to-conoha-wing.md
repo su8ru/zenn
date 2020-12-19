@@ -2,7 +2,7 @@
 title: "ConoHa WING に GitHub Actions でデプロイしよう！"
 emoji: "🚀"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["conoha", "conohawing", "githubactions", "アドベントカレンダー"]
+topics: ["conoha", "conohawing", "conohavps", "githubactions", "アドベントカレンダー"]
 published: true
 ---
 
