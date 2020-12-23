@@ -3,7 +3,7 @@ title: "最近話題の TS 製 ORM「Prisma 2」でログイン処理を試し�
 emoji: "📚"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["typescript", "prisma", "frourio", "アドベントカレンダー"]
-published: false
+published: true
 ---
 
 # はじめに
