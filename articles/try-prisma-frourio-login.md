@@ -269,7 +269,7 @@ declare module 'fastify' {
 多様な機能があるとその分学習コストも大きくなるので、object と Promise で SQL first なほうが使い勝手はいいかも。
 また、frourio はまだ `v0.x.x` のため、今後の発展にも期待です！
 
-最終日🎄である明日は、この記事にも登場した frourio の作者である [m_mitsuhide](https://qiita.com/m_mitsuhide) さんによる「frourioで2020年を締めます」です！わくわく！
+最終日🎄である明日は、この記事にも登場した frourio の作者である [m_mitsuhide](https://qiita.com/m_mitsuhide) さんによる [設定不要でNext\.jsとNuxt\.jsの内部リンクを型安全に取得できる最強ライブラリ「pathpida」](https://zenn.dev/solufa/articles/renewed-pathpida) です！わくわく！
 
 ---
 
