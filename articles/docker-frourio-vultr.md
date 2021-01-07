@@ -1,5 +1,5 @@
 ---
-title: "月 5.5 ドルで VPS を借りて Docker & nginx-proxy で frourio を動かす！"
+title: "月 5.5ドルで使える Vultr で nginx-proxy を構築して frourio を Docker で動かす！"
 emoji: "🐳"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [vps, docker, nginxproxy, frourio, githubactions]
@@ -311,9 +311,7 @@ RUN mkdir /src/server
 
 WORKDIR /src
 
-COPY package*.json ./
-COPY /server/package*.json ./server
-RUN yarn install
+COPY /server/package.json /server/yarn.lock ./server/
 RUN yarn install --cwd ./server
 
 COPY . .
@@ -321,6 +319,8 @@ COPY . .
 EXPOSE 8080
 CMD yarn build:server && yarn start:server
 ```
+
+`yarn install` は server 側だけで問題ありません（ルートディレクトリでの install は不要）
 
 ↓ほぼこの記事そのままです。この場を借りて感謝 🙏
 
@@ -330,15 +330,17 @@ https://zenn.dev/jun1123/articles/deploy-frourio#docker%E3%83%95%E3%82%A1%E3%82%
 
 `server/.env` を作成します。
 
-```env:/var/docker/app/kostl-next/server/.env
+```ini:/var/docker/app/kostl-next/server/.env
 SERVER_IP=0.0.0.0
 BASE_PATH=/api
 DATABASE_URL=mysql://kostl:your_password@mysql:3306/kostl-next
-API_ORIGIN=https://next.kostl.info
+API_ORIGIN=https://api.next.kostl.info
 JWT_SECRET=your_jwt_secret
 USER_ID=id
 USER_PASS=password
 ```
+
+`DATABASE_URL` のホストは、サービス名（今回は `mysql`）で名前解決されます。
 
 ## Lumen
 
@@ -547,7 +549,7 @@ workflow を commit して push すると実際に走ります。
 
 build, up も問題なく行われていることが確認できます 🎉
 
-![](https://storage.googleapis.com/zenn-user-upload/o7y9vnng7m606jkgk8a0nfkjfh95)
+![](https://storage.googleapis.com/zenn-user-upload/qnurskb8sr5ik74wxel017iupsy3)
 
 # おわりに
 
