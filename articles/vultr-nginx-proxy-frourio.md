@@ -3,7 +3,7 @@ title: "月 5.5ドルで使える Vultr で nginx-proxy を構築して frourio 
 emoji: "🐳"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [vps, docker, nginxproxy, frourio, githubactions]
-published: false
+published: true
 ---
 
 # はじめに
