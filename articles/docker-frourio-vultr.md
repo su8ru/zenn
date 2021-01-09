@@ -147,12 +147,22 @@ Vultr のドキュメントに従っていれます。
 ユーザーがドキュメントに寄稿できる（報奨制度有り）ので、大量の記事があります。
 ここもうれしいポイント。
 
-### 自分を docker group に入れる
+### 自分を docker グループに入れる
 
 ```sh
 $ sudo usermod -aG docker subaru
 $ id subaru
 # uid=1000(subaru) gid=1000(subaru) groups=1000(subaru),27(sudo),998(docker)
+```
+
+## ディレクトリを用意
+
+```sh
+sudo mkdir /var/docker
+sudo chown -R subaru:docker /var/docker
+chmod 775 -R /var/docker
+cd /var/docker
+mkdir app && mkdir proxy
 ```
 
 ## network の作成
@@ -389,7 +399,7 @@ RUN a2enmod rewrite
 
 ## アプリを起動
 
-```sh:/var/docker/hoge-dir
+```sh:/var/docker/app/hoge-dir
 $ docker-compose up -d
 ```
 
