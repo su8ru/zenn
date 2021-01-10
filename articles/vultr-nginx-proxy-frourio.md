@@ -409,13 +409,21 @@ $ docker-compose up -d
 $ docker-compose logs -f
 ```
 
-# ドメインに A レコードを設定する
+# ドメインに A・AAAA レコードを設定する
 
-ドメイン関連でやることは 1 つ。A レコードを設定するだけです。
+ドメイン関連でやることは 1 つ。A・AAAA レコードを設定するだけです。
 
 VPS の IP アドレスを設定すればドメイン設定は完了！
 
-![](https://storage.googleapis.com/zenn-user-upload/tdhjkykdrzwwg3kl0zj5mjt95x2m)
+![](https://storage.googleapis.com/zenn-user-upload/6kyv9tdlzyw1yb4ijemqeqw2hm38)
+
+IPv4 (A レコード) は Overview にあるのですが、IPv6 (AAAA レコード) は Settings > IPv6 にあります。
+これは現時点では IPv6 がオプション扱いだからだと思われます。（[#Deploy New Instance](#deploy-new-instance) の Additional Features で選択式です）
+
+![](https://storage.googleapis.com/zenn-user-upload/zyi9lje3sht0thouszh2ou419p9f)
+
+> 2020.01.10 追記
+> IPv6 (AAAA レコード) を追記しました
 
 # GitHub Actions でデプロイを自動化
 
