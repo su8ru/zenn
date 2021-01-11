@@ -282,7 +282,7 @@ $ docker-compose logs -f
 
 nginx-proxy と Let's Encrypt の設定は各アプリの環境変数で行います。
 
-```yml:/var/docker/app/hoge-dir/docker-compose.yml
+```yml:/var/docker/app/kostl-next/docker-compose.yml
 version: "3.8"
 
 services:
@@ -306,6 +306,9 @@ networks:
 ```
 
 サービス名・コンテナ名は他とかぶらないものであればお好みでよさそう。
+
+> 2021.01.12 追記
+> 当初ディレクトリ名を `hoge-dir` としていましたが、分かりづらいため `kostl-next` に置き換えました
 
 ## frourio
 
@@ -399,13 +402,13 @@ RUN a2enmod rewrite
 
 ## アプリを起動
 
-```sh:/var/docker/app/hoge-dir
+```sh:/var/docker/app/kostl-next
 $ docker-compose up -d
 ```
 
 初回起動ですし、ログも追っておきましょう。
 
-```sh
+```sh:/var/docker/app/kostl-next
 $ docker-compose logs -f
 ```
 
@@ -548,7 +551,7 @@ jobs:
 GitHub リポジトリの Settings > Secrets に Secrets を登録します。
 ここで登録した情報は workflow 内で `secrets.SSH_PORT` のように参照できます。
 <!-- textlint-disable ja-technical-writing/max-comma -->
-`DEPLOY_DIR` (`/var/docker/app/hoge-dir`),
+`DEPLOY_DIR` (`/var/docker/app/kostl-next`),
 `SSH_HOST` ( IP Address ),
 `SSH_PORT` (設定したやつ),
 `SSH_USER` (`deploy`),
