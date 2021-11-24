@@ -15,7 +15,7 @@ published: true
   高校３年生。普段は TypeScript に使われながらウェブフロントエンド技術で遊んでいます。
 - たけ ([@takeno_hito](https://zenn.dev/takeno_hito) / [Twitter:@Takeno_hito](https://twitter.com/Takeno_hito))
   こうこうさんねんせい。コーディングよりはゲームのほうが好きです。上下二人に揉まれながらも一応リーダーをやってました。
-- ふわわあ ([@fuwa2003](https://zenn.dev/fuwa2003) / [Twitter@ibuki2003](https://twitter.com/ibuki2003))
+- ふわわあ ([@fuwa2003](https://zenn.dev/fuwa2003) / [Twitter:@ibuki2003](https://twitter.com/ibuki2003))
   高3。Vimmer。半言い出しっぺなのに後半コード書いてないとかで最近は肩身が狭い思いをしています。
 
 https://twitter.com/su8ru_/status/1459880972879466501
