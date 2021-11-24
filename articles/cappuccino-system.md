@@ -3,7 +3,7 @@ title: '文化祭入退場・混雑管理システム "CAPPUCCINO" 開発・運�
 emoji: "☕"
 type: "tech"
 topics: ["react","typescript","lumen","aspida","qrcode"]
-published: false
+published: true
 ---
 
 この記事は、文化祭実行委員会に所属する^[便宜上こう書きましたが、正確には今年度の文実には所属しておらず、文実外から後輩に協力するという形で参加していました]現高校 3 年生 3 人で文化祭の入退場混雑管理システム「CAPPUCCINO」を 2 年間に渡り開発し、実際に運用した記録を残したものです。
