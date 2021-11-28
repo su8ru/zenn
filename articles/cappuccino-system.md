@@ -357,7 +357,7 @@ type Status = {
 
 なお、文化祭前日までに 7 割強の人がチケットを表示してくれていました。
 
-![デジタルチケットのスクリーンショット](https://storage.googleapis.com/zenn-user-upload/a7ebe9ecb85a-20211120.png)
+![デジタルチケットのスクリーンショット](https://storage.googleapis.com/zenn-user-upload/2bfd7289b1df-20211128.png)
 *デジタルチケットのスクリーンショット*
 
 # 4. 開発・運営記
