@@ -20,6 +20,9 @@ published: true
 
 https://twitter.com/su8ru_/status/1459880972879466501
 
+
+https://github.com/afes-website
+
 # 1. CAPPUCCINO システム概要
 
 私達が開発した CAPPUCCINO は、文化祭の開催において入退場を管理し、混雑を管理することを目的としたシステムです。今年の 11月13日と14日に開催された第74回麻布学園文化祭で実際に運用されました。
@@ -146,6 +149,10 @@ API 定義は GitHub Actions で npm publish していますが、event を tag 
 - monorepo 構成にしたときにデプロイ等が面倒であったこと
 - 完全に同期されたバージョン管理が難しかったので、コミットツリーが煩雑になる恐れがあったこと
 - API ドキュメントの更新後に両サイドでそれに準拠した開発というサイクルを確立するため
+
+これらのリポジトリはすべて以下の GitHub Organization にあり、そのほとんどを MIT License として公開しています。
+
+https://github.com/afes-website
 
 # 3. システム全体の設計と仕様
 
