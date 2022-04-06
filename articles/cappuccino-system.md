@@ -20,7 +20,6 @@ published: true
 
 https://twitter.com/su8ru_/status/1459880972879466501
 
-
 https://github.com/afes-website
 
 # 1. CAPPUCCINO システム概要
