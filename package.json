@@ -11,10 +11,10 @@
     "preview": "zenn preview"
   },
   "devDependencies": {
-    "textlint": "^11.7.6",
+    "textlint": "^14.2.1",
     "textlint-filter-rule-comments": "^1.2.2",
-    "textlint-rule-preset-ja-spacing": "^2.0.2",
-    "textlint-rule-preset-ja-technical-writing": "^4.0.1",
-    "zenn-cli": "^0.1.108"
+    "textlint-rule-preset-ja-spacing": "^2.4.3",
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1",
+    "zenn-cli": "^0.1.157"
   }
 }
