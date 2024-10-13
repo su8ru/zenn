@@ -1,5 +1,5 @@
 ---
-title: 'YAPC::Hakodate 2024 参加記'
+title: 'YAPC::Hakodate 2024 に参加したら最高だった！'
 emoji: '🐪'
 type: 'idea' # tech: 技術記事 / idea: アイデア
 topics: ['yapc', 'yapcjapan']
