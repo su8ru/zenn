@@ -3,7 +3,7 @@ title: '[HUIT] DIVER OSINT CTF Writeup'
 emoji: '🤿'
 type: 'tech' # tech: 技術記事 / idea: アイデア
 topics: ['ctf', 'writeup', 'osint']
-published: false
+published: true
 ---
 
 # はじめに
