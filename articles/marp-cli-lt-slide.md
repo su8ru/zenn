@@ -3,7 +3,7 @@ title: '爆速できれいな LT スライド作りを支える技術'
 emoji: '📋'
 type: 'tech' # tech: 技術記事 / idea: アイデア
 topics: ['marp', 'markdown']
-published: false
+published: true
 ---
 
 みなさん LT スライドってどうやって作っていますか？
