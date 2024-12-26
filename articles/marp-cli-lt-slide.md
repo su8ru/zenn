@@ -1,0 +1,127 @@
+---
+title: '爆速できれいな LT スライド作りを支える技術'
+emoji: '📋'
+type: 'tech' # tech: 技術記事 / idea: アイデア
+topics: ['marp', 'markdown']
+published: false
+---
+
+みなさん LT スライドってどうやって作っていますか？
+
+最近サークル内などで LT をする機会があり、「スライドどうやって作っているの？」と聞かれることがあったため、私の LT スライド作りを支える技術をまとめておこうと思います。
+
+直近で作ったスライドの例 ↓
+
+https://slides.su8.run/241129-sdd/
+
+## スライドを Markdown で書く
+
+タイトルにもある通り「爆速で」作るためには、テキストベースで作っていくのが最適だと考えています。
+パワポや Canva など WYSIWYG エディターでスライドを作ることも可能ですが、LT を聞きながら自分の LT のスライドを作るような場面では、GUI で凝っている余裕はありません。
+
+そして HTML を書くのは大変なので、軽いマークアップ言語としてまず出てくるのは Markdown だと思います。
+Markdown からスライドを作成できるツール・サービスはいろいろありますが、私はスライド作成ツールとして Marp を、そしてその CLI として `marp-cli` を使用しています。
+
+https://github.com/marp-team/marp-cli
+
+https://www.npmjs.com/package/@marp-team/marp-cli
+
+似たような CLI からスライドを作るツールとして Vue.js ベースの [Slidev](https://sli.dev/) などもありますが、HTML ベースの Marp のほうが薄くてうれしいと思っています（後述のカスタマイズ性もある）。
+
+## スライドを Git 管理する
+
+そしてこの `marp-cli` を利用するための環境を丸ごと Git 管理しています。
+
+これにより、複数の端末で編集内容を引き継ぐことを可能としています。それに、せっかくテキストベースで作るなら Git 管理もしたいですよね？
+
+https://github.com/su8ru/slides
+
+Git 管理するということは、GitHub に push することができます。すると、公開も簡単にできるというわけです 👇
+
+## スライドをデプロイする
+
+`marp-cli` はスライドを静的な HTML として生成することができます。私はこれに画像を加えて、[Cloudflare Pages](https://www.cloudflare.com/ja-jp/developer-platform/products/pages/) にデプロイしています。
+（ビルドプロセスの詳細はここでは省きます。さっきのリポジトリの package.json とかを見ると参考になるかも）
+
+このようにして slides.su8.run がデプロイされているというわけです。
+
+https://slides.su8.run
+
+_いまはこのトップページスライドを手作業で更新しているので、いつか自動化したい。というかトップページはスライドじゃないほうがうれしいよね……_
+
+---
+
+デプロイするメリットとしては、
+
+1. スライドを簡単に公開できる　というか自動的に公開されている
+2. 自分の端末じゃない環境でもパッとスライドを開いて喋れる
+3. スライドを作っているときの見た目のまま公開できる
+
+などがあると感じています。
+
+Git に載せないと公開できないのが不便なこともあるんですが、これはあんまりデプロイのデメリットではないかなと思います。
+
+## スライドの見た目をカスタマイズする
+
+Marp は大人気ツールなので、そのまま使うと「よくある」見た目になりがちです。
+
+デフォルトテーマもシンプルな見た目でよいのですが、ここではカスタムの方法を紹介していきます。
+
+### CSS をがんばる
+
+大体のことは CSS でなんとかなります。
+
+また、[Marp v4 でスライドが display: block; になった](https://github.com/orgs/marp-team/discussions/533)ので、大胆なレイアウトも組みやすくなったと感じています。
+
+（このために Marp v4 に上げましたが、VSCode プラグインが未対応で悲しい。私はブラウザプレビューを駆使して頑張っています）
+
+https://github.com/su8ru/slides/blob/main/src/241129-sdd/index.md#L16-L24
+
+### テーマを作る
+
+自分用のテーマを作るのも楽しくておすすめです。
+
+イチから全部作るのは大変なので、デフォルトテーマをベースにしたほうが楽ではあります。
+
+https://github.com/su8ru/slides/blob/main/src/themes/su8ru.css
+
+👆 は最近作り直した自分用テーマですが、最近知った OKLCH という色空間をふんだんに活用していて、メンテしやすく見やすいテーマを作れたと思っています。
+
+このサイトで数値いじってるだけで楽しい。
+
+https://oklch.com/
+
+---
+
+また、こういったユーティリティ系のクラスも定義しておくと便利です。これは 2 columns にするやつ。
+
+https://github.com/su8ru/slides/blob/main/src/themes/su8ru.css#L56-L65
+
+https://github.com/su8ru/slides/blob/main/src/241129-sdd/index.md#L193-L261
+
+### markdown-it をカスタムする
+
+CSS だけではどうにもならないこともあります。例えばコードブロックのカラーテーマを変えるとか。
+
+CSS だけでなんとかしようと試みましたが、どうにもならなかったので markdown-it のプラグインを用いて変更しています。
+
+https://github.com/su8ru/slides/blob/main/engine.mjs
+
+実行時に `--engine` としてファイルを指定するのを忘れずに。
+
+https://github.com/su8ru/slides/blob/main/package.json#L7
+
+（この方法は [@re_taro](https://zenn.dev/re_taro) に教わりました。Special Thanks!）
+
+## おわりに
+
+大言壮語なタイトル・書き出しから始まりましたが、蓋を開けてみればあまり大それたことはしていないことがおわかりいただけたのではないかなと思っています。
+
+ぜひ marp-cli で快適な LT スライド作りを、そして自分用テーマ作りの沼を楽しんでください！
+
+---
+
+この記事は [HUIT Advent Calendar 2024](https://qiita.com/advent-calendar/2024/huit) の 10 日目（になるはずの記事）でした！
+今日は 12/27 ……なんとかアドカレ投稿期間に間に合わせようとしましたが、それも叶わず大幅遅れでごめんなさい 🙇
+
+https://qiita.com/advent-calendar/2024/huit
